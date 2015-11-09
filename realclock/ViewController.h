@@ -6,9 +6,10 @@
 //  Copyright © 2015 AleGiac. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import iAd;
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController <ADBannerViewDelegate>
 
 
 @end

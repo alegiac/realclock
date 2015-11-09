@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,101 +18,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9S-45-VIv">
-                                <rect key="frame" x="23" y="21" width="57" height="85"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLv-HX-3CL">
+                                <rect key="frame" x="54" y="215" width="448" height="129"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9S-45-VIv">
+                                        <rect key="frame" x="20" y="24" width="57" height="85"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="Wyu-G8-1LK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX6-bg-Urp">
+                                        <rect key="frame" x="78" y="24" width="57" height="85"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="h1e-wi-kei"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text=":" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV2-AM-IWE">
+                                        <rect key="frame" x="134" y="44" width="32" height="62"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="9CI-3L-SfL"/>
+                                            <constraint firstAttribute="height" constant="62" id="Py6-jI-7Wg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW6-XG-2Em">
+                                        <rect key="frame" x="166" y="24" width="57" height="85"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="lSY-rT-dpm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhv-Ab-VM0">
+                                        <rect key="frame" x="223" y="23" width="57" height="85"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="Jsi-zD-3Nj"/>
+                                            <constraint firstAttribute="height" constant="85" id="twz-PP-ICx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text=":" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-AQ-2aa">
+                                        <rect key="frame" x="281" y="46" width="32" height="62"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="r5l-SU-dGM"/>
+                                            <constraint firstAttribute="width" constant="32" id="wJE-XK-rrv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpB-Fw-LCE">
+                                        <rect key="frame" x="314" y="21" width="57" height="85"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="wCG-G1-6Zj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHD-Jo-LQv">
+                                        <rect key="frame" x="371" y="20" width="57" height="85"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="fZz-hf-JQZ"/>
+                                            <constraint firstAttribute="height" constant="85" id="oxB-ty-asK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="Wyu-G8-1LK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX6-bg-Urp">
-                                <rect key="frame" x="81" y="21" width="57" height="85"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="h1e-wi-kei"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text=":" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV2-AM-IWE">
-                                <rect key="frame" x="137" y="41" width="32" height="62"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="9CI-3L-SfL"/>
-                                    <constraint firstAttribute="height" constant="62" id="Py6-jI-7Wg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW6-XG-2Em">
-                                <rect key="frame" x="169" y="21" width="57" height="85"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="lSY-rT-dpm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhv-Ab-VM0">
-                                <rect key="frame" x="226" y="20" width="57" height="85"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="Jsi-zD-3Nj"/>
-                                    <constraint firstAttribute="height" constant="85" id="twz-PP-ICx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text=":" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-AQ-2aa">
-                                <rect key="frame" x="284" y="43" width="32" height="62"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="r5l-SU-dGM"/>
-                                    <constraint firstAttribute="width" constant="32" id="wJE-XK-rrv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpB-Fw-LCE">
-                                <rect key="frame" x="317" y="18" width="57" height="85"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="wCG-G1-6Zj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHD-Jo-LQv">
-                                <rect key="frame" x="374" y="17" width="57" height="85"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="fZz-hf-JQZ"/>
-                                    <constraint firstAttribute="height" constant="85" id="oxB-ty-asK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="90"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cpB-Fw-LCE" firstAttribute="baseline" secondItem="OHD-Jo-LQv" secondAttribute="baseline" id="F6n-GO-0rR"/>
-                            <constraint firstItem="nW6-XG-2Em" firstAttribute="baseline" secondItem="cX6-bg-Urp" secondAttribute="baseline" id="fAL-z0-GU9"/>
-                            <constraint firstItem="nW6-XG-2Em" firstAttribute="baseline" secondItem="nhv-Ab-VM0" secondAttribute="baseline" id="pWt-tn-LvI"/>
-                            <constraint firstItem="B9S-45-VIv" firstAttribute="baseline" secondItem="cX6-bg-Urp" secondAttribute="baseline" id="qXb-LN-s3X"/>
+                            <constraint firstItem="bLv-HX-3CL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="195" id="7o3-cY-Lwd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bLv-HX-3CL" secondAttribute="bottom" constant="256" id="BSo-7E-5v9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bLv-HX-3CL" secondAttribute="trailing" constant="78" id="Vg8-sE-Jpv"/>
+                            <constraint firstItem="bLv-HX-3CL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="x6q-Yo-z37"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="BSo-7E-5v9" id="B71-EN-yUG"/>
+                        <outlet property="contentView" destination="bLv-HX-3CL" id="kTm-Jx-Gm4"/>
                         <outlet property="hour1Label" destination="B9S-45-VIv" id="AOK-pd-HUd"/>
                         <outlet property="hour2Label" destination="cX6-bg-Urp" id="CGY-5m-VJv"/>
                         <outlet property="minute1Label" destination="nW6-XG-2Em" id="YiF-Ss-b5C"/>
@@ -124,6 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="80" y="405"/>
         </scene>
     </scenes>
 </document>

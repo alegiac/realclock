@@ -15,6 +15,7 @@
 		F8B882881BE7904A009FA529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B882861BE7904A009FA529 /* LaunchScreen.storyboard */; };
 		F8B882931BE7904A009FA529 /* realclockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B882921BE7904A009FA529 /* realclockTests.m */; };
 		F8B8829E1BE7904A009FA529 /* realclockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8829D1BE7904A009FA529 /* realclockUITests.m */; };
+		F8F41C831BF0DF8400D3FF4F /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F41C821BF0DF8400D3FF4F /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F8B882991BE7904A009FA529 /* realclockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = realclockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B8829D1BE7904A009FA529 /* realclockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = realclockUITests.m; sourceTree = "<group>"; };
 		F8B8829F1BE7904A009FA529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8F41C821BF0DF8400D3FF4F /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8F41C831BF0DF8400D3FF4F /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		F8B8826C1BE7904A009FA529 = {
 			isa = PBXGroup;
 			children = (
+				F8F41C821BF0DF8400D3FF4F /* iAd.framework */,
 				F8B882771BE7904A009FA529 /* realclock */,
 				F8B882911BE7904A009FA529 /* realclockTests */,
 				F8B8829C1BE7904A009FA529 /* realclockUITests */,
@@ -498,6 +502,7 @@
 				F8B882A41BE7904A009FA529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8B882A51BE7904A009FA529 /* Build configuration list for PBXNativeTarget "realclockTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +511,7 @@
 				F8B882A71BE7904A009FA529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8B882A81BE7904A009FA529 /* Build configuration list for PBXNativeTarget "realclockUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +520,7 @@
 				F8B882AA1BE7904A009FA529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
