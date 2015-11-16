@@ -7,9 +7,10 @@
 //
 
 @import iAd;
+@import CoreLocation;
 
 
-@interface ViewController : UIViewController <ADBannerViewDelegate>
+@interface ViewController : UIViewController <ADBannerViewDelegate,CLLocationManagerDelegate>
 
 
 @end

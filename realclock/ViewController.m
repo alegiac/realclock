@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <YWeatherAPI/YWeatherAPI.h>
 
 @interface ViewController ()
 
@@ -25,6 +26,8 @@
 @property (nonatomic, strong) ADBannerView *bannerView;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomConstraint;
 
+// Location manager
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
@@ -53,6 +56,24 @@
     NSTimer *clockTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(showTime) userInfo:nil repeats:YES];
     [runloop addTimer:clockTimer forMode:NSRunLoopCommonModes];
     [runloop addTimer:clockTimer forMode:UITrackingRunLoopMode];
+    
+    // Location manager
+    if (self.locationManager == nil) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+    } else {
+        nil;
+    }
+    
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    } else {
+        nil;
+    }
+    
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager startUpdatingLocation];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -143,6 +164,29 @@
     _second1Label.text = [time substringWithRange:NSMakeRange(6,1)];
     _second2Label.text = [time substringWithRange:NSMakeRange(7,1)];
     
+}
+
+
+// Delegate method from the CLLocationManagerDelegate protocol.
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations {
+    // If it's a relatively recent event, turn off updates to save power.
+    CLLocation* location = [locations lastObject];
+    NSDate* eventDate = location.timestamp;
+    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+    if (fabs(howRecent) < 15.0) {
+        // If the event is recent, do something with it.
+        NSLog(@"latitude %+.6f, longitude %+.6f\n",
+              location.coordinate.latitude,
+              location.coordinate.longitude);
+        
+        [[YWeatherAPI sharedManager] todaysForecastForCoordinate:location success:^(NSDictionary *result) {
+            NSLog(@"result = %@",result);
+        } failure:^(id response, NSError *error) {
+            NSLog(@"Error = %@",error.description);
+        }];
+        
+    }
 }
 
 @end

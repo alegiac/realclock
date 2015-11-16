@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA8FB7A2B9D0CAD9C881BFB4 /* libPods-realclock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3FCC11AE74563A66247FD2 /* libPods-realclock.a */; };
+		F868E2761BFA38EA00AB2884 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F868E2751BFA38EA00AB2884 /* CoreLocation.framework */; };
 		F8B8827A1BE7904A009FA529 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B882791BE7904A009FA529 /* main.m */; };
 		F8B8827D1BE7904A009FA529 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8827C1BE7904A009FA529 /* AppDelegate.m */; };
 		F8B882801BE7904A009FA529 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8827F1BE7904A009FA529 /* ViewController.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C3FCC11AE74563A66247FD2 /* libPods-realclock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-realclock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A62E55B3E37D54D652FA8896 /* Pods-realclock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realclock.release.xcconfig"; path = "Pods/Target Support Files/Pods-realclock/Pods-realclock.release.xcconfig"; sourceTree = "<group>"; };
+		EB5F4712087BD8D047DCB0ED /* Pods-realclock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realclock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-realclock/Pods-realclock.debug.xcconfig"; sourceTree = "<group>"; };
+		F868E2751BFA38EA00AB2884 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F8B882751BE7904A009FA529 /* realclock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realclock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B882791BE7904A009FA529 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8B8827B1BE7904A009FA529 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,7 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F868E2761BFA38EA00AB2884 /* CoreLocation.framework in Frameworks */,
 				F8F41C831BF0DF8400D3FF4F /* iAd.framework in Frameworks */,
+				CA8FB7A2B9D0CAD9C881BFB4 /* libPods-realclock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,14 +89,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B56944D65736899C30708314 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C3FCC11AE74563A66247FD2 /* libPods-realclock.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7E69255884BF921025B4FDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB5F4712087BD8D047DCB0ED /* Pods-realclock.debug.xcconfig */,
+				A62E55B3E37D54D652FA8896 /* Pods-realclock.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F8B8826C1BE7904A009FA529 = {
 			isa = PBXGroup;
 			children = (
+				F868E2751BFA38EA00AB2884 /* CoreLocation.framework */,
 				F8F41C821BF0DF8400D3FF4F /* iAd.framework */,
 				F8B882771BE7904A009FA529 /* realclock */,
 				F8B882911BE7904A009FA529 /* realclockTests */,
 				F8B8829C1BE7904A009FA529 /* realclockUITests */,
 				F8B882761BE7904A009FA529 /* Products */,
+				E7E69255884BF921025B4FDE /* Pods */,
+				B56944D65736899C30708314 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8B882A21BE7904A009FA529 /* Build configuration list for PBXNativeTarget "realclock" */;
 			buildPhases = (
+				B9F105E2AA425BA5E3931C1B /* Check Pods Manifest.lock */,
 				F8B882711BE7904A009FA529 /* Sources */,
 				F8B882721BE7904A009FA529 /* Frameworks */,
 				F8B882731BE7904A009FA529 /* Resources */,
+				06A7045B0F607B6CD1525878 /* Embed Pods Frameworks */,
+				CBBB0AB33E34A7176BAEFA71 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +299,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06A7045B0F607B6CD1525878 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-realclock/Pods-realclock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9F105E2AA425BA5E3931C1B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBBB0AB33E34A7176BAEFA71 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-realclock/Pods-realclock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8B882711BE7904A009FA529 /* Sources */ = {
@@ -415,6 +494,7 @@
 		};
 		F8B882A31BE7904A009FA529 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5F4712087BD8D047DCB0ED /* Pods-realclock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = realclock/Info.plist;
@@ -426,6 +506,7 @@
 		};
 		F8B882A41BE7904A009FA529 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A62E55B3E37D54D652FA8896 /* Pods-realclock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = realclock/Info.plist;
